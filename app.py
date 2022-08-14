@@ -34,7 +34,7 @@ def multiply_post(num):
 @app.get('/multiply/<int:num>')
 def multiply_get(num):
     return jsonify({
-        "square": f'Square of {num} is {num ** 2}'
+        "square": f'Square of {num} is {num ** 2} !!'
     })
 
 
