@@ -5,19 +5,19 @@ steps:
            'us-central1-docker.pkg.dev/${PROJECT_ID}/github_ganeshsonawane06_web_app/web_app', 
            '.']
 
-  # Docker Push
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 
-           'us-central1-docker.pkg.dev/${PROJECT_ID}/web_app']
+  # # Docker Push
+  # - name: 'gcr.io/cloud-builders/docker'
+  #   args: ['push', 
+  #          'us-central1-docker.pkg.dev/${PROJECT_ID}/web_app']
 
-  # Entrypoint, timeout and environment variables
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'gcloud'
-    timeout: 240s
-    args: ['compute', 'instances', 
-           'create-with-container', 'first-vm-web-app',
-           '--container-image', 
-           'us-central1-docker.pkg.dev/${PROJECT_ID}/web_app']
+  # # Entrypoint, timeout and environment variables
+  # - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  #   entrypoint: 'gcloud'
+  #   timeout: 240s
+  #   args: ['compute', 'instances', 
+  #          'create-with-container', 'first-vm-web-app',
+  #          '--container-image', 
+  #          'us-central1-docker.pkg.dev/${PROJECT_ID}/web_app']
     env:
       - 'CLOUDSDK_COMPUTE_REGION=us-central1'
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
