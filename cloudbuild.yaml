@@ -3,7 +3,7 @@ steps:
 args: [
   'build',
   '-t',
-  'gcr.io/ganesh-sona-dev/web_app:latest',
+  'us-central1-docker.pkg.dev/ganesh-sona-dev/github_ganeshsonawane06_web_app/web_app:latest',
   '.'
 ]
 timeout: 36s
