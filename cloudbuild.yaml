@@ -2,13 +2,13 @@ steps:
   # Docker Build
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 
-           'us-docker.pkg.dev/${PROJECT_ID}/web_app', 
+           'us-docker.pkg.dev/${PROJECT_ID}/web-app', 
            '.']
 
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 
-           'us-docker.pkg.dev/${PROJECT_ID}/web_app']
+           'us-docker.pkg.dev/${PROJECT_ID}/web-app']
 
   # # Entrypoint, timeout and environment variables
   # - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
