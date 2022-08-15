@@ -1,5 +1,10 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/ganesh-sona-dev/web_app:latest', '.']
-timeout: 36
+args: [
+  'build',
+  '-t',
+  'gcr.io/ganesh-sona-dev/web_app:latest',
+  '.'
+]
+timeout: 36s
 images: ['gcr.io/ganesh-sona-dev/web_app:latest']
